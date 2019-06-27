@@ -5,7 +5,7 @@ import Html exposing (Html)
 
 
 main =
-    Browser.sandbox { init = init, update = update, view = view }
+    Browser.sandbox { init = initModel, update = update, view = view }
 
 
 type alias Model =
@@ -16,7 +16,8 @@ type alias Msg =
     ()
 
 
-init =
+initModel : Model
+initModel =
     ()
 
 
