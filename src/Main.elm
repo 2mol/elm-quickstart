@@ -12,8 +12,8 @@ type alias Model =
     ()
 
 
-type alias Msg =
-    ()
+type Msg =
+    NoOp
 
 
 initModel : Model
@@ -21,7 +21,7 @@ initModel =
     ()
 
 
-view : Model -> Html msg
+view : Model -> Html Msg
 view model =
     Html.div [] []
 
