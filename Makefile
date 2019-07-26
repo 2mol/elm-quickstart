@@ -5,7 +5,7 @@ DEPLOY_SERVER=127.0.0.1
 DEPLOY_USER=anon
 DEPLOY_FOLDER=site/
 
-.DEFAULT: build
+.DEFAULT_GOAL := build
 
 ## Build site and collect all assets in site/ subfolder.
 build:
