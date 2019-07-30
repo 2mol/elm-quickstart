@@ -6,6 +6,8 @@ I usually copy-paste some boilerplate from other projects, so I collected some o
 
 This is tailored to my preferences, like using a simple `Makefile` to collect the various build/deploy/live-reload commands I need. I am open to changing things to make it more useful for other people.
 
+I just found out about [GitHub templates](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates), which is a nice fit for this sort of setup. Just use the green button above.
+
 ## Dependencies
 
 There are some basic dependencies that help my development workflow a lot:
