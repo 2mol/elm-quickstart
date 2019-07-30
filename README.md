@@ -2,7 +2,7 @@
 
 It usually takes me a little bit of time to get started with a new elm project. But I wanna get started right away, as fast as possible! 🚀
 
-I usually copy-paste some boilerplate from other projects, so I collected some of it in this template repository. I hope to keep things simple while still providing functionality like recompiling on file changes etc.
+I tend to copy-paste some boilerplate from other projects, so I collected some of it in this template repository. I hope to keep things simple while still providing functionality like recompiling on file changes etc.
 
 This is tailored to my preferences, like using a simple `Makefile` to collect the various build/deploy/live-reload commands I need. I am open to changing things to make it more useful for other people.
 
