@@ -1,6 +1,6 @@
 .PHONY: site site-dev watch help
 
-.DEFAULT_GOAL := help
+.DEFAULT_GOAL := site
 
 ## Build site with optimize and compress resulting javascript.
 site:
@@ -13,7 +13,7 @@ site-dev:
 
 ## Watch files for changes and recompile when necessary.
 watch:
-	rg --files | entr make dev-build
+	rg --files --type elm | entr make site-dev
 
 
 # coloured `make` help text, courtesy of
