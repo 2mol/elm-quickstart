@@ -1,28 +1,23 @@
-.PHONY: build deploy watch help
+.PHONY: site site-dev watch help
 
-ELM=elm
-DEPLOY_SERVER=127.0.0.1
-DEPLOY_USER=anon
-DEPLOY_FOLDER=site/
+.DEFAULT_GOAL := help
 
-.DEFAULT: build
-
-## Build site and collect all assets in site/ subfolder.
-build:
+## Build site with optimize and compress resulting javascript.
+site:
 	elm make src/Main.elm --optimize --output site/main.js
+	./deploy/optimize.sh
 
-## Transfer the compiled site and its assets to the server.
-deploy: build
-	rsync -crv -e ssh --delete site/ $(DEPLOY_USER)@$(DEPLOY_SERVER):$(DEPLOY_FOLDER)
+## Build site without optimizing.
+site-dev:
+	elm make src/Main.elm --output site/main.js
 
 ## Watch files for changes and recompile when necessary.
 watch:
-	rg --files | entr make build
+	rg --files | entr make dev-build
 
 
 # coloured `make` help text, courtesy of
 # https://gist.github.com/prwhite/8168133#gistcomment-2278355
-
 GREEN  := $(shell tput -Txterm setaf 2)
 YELLOW := $(shell tput -Txterm setaf 3)
 WHITE  := $(shell tput -Txterm setaf 7)

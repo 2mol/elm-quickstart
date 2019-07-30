@@ -1,4 +1,4 @@
 
 ```
-rm -rf .git && git init && rm README.md && elm init
+rm README.md && elm init
 ```
