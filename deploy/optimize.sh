@@ -13,3 +13,4 @@ size=$(cat $out | wc -c)
 echo "Compressed size: $((size / 1000))k"
 size=$(cat $out | gzip -c | wc -c)
 echo "Gzipped size:    $((size / 1000))k"
+
