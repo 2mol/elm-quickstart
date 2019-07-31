@@ -1,5 +1,18 @@
 # Elm-quickstart template
 
+```
+$ make help
+
+Usage:
+  make <target>
+
+Targets:
+  site       Build site with optimize and compress resulting javascript.
+  site-dev   Build site without optimizing.
+  watch      Watch files for changes and recompile when necessary.
+  help       Show this help.
+```
+
 It usually takes me a little bit of time to get started with a new elm project. But I wanna get started right away, as fast as possible! 🚀
 
 I tend to copy-paste some boilerplate from other projects, so I collected some of it in this template repository. I hope to keep things simple while still providing functionality like recompiling on file changes etc.
